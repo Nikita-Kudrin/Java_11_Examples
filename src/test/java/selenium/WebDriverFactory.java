@@ -21,7 +21,7 @@ public class WebDriverFactory {
             case "CHROME":
                 return new RemoteWebDriver(driverCapabilities);
             case "LOCAL":
-                System.setProperty("webdriver.chrome.driver","D:\\Temp\\chromedriver_win32\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "D:\\Temp\\chromedriver_win32\\chromedriver.exe");
                 return new ChromeDriver();
             default:
                 throw new UnsupportedOperationException("Browser " + browserName + " isn't supported");

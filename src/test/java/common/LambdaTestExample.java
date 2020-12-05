@@ -4,9 +4,7 @@ import org.testng.annotations.Test;
 import sample.impl.Child;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class LambdaTestExample {
 

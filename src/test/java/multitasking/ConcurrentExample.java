@@ -3,7 +3,6 @@ package multitasking;
 import common.BaseTest;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.UUID;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;

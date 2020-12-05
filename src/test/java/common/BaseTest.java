@@ -1,10 +1,8 @@
 package common;
 
-import jdk.jfr.Timespan;
-import org.testng.annotations.BeforeClass;
-
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 

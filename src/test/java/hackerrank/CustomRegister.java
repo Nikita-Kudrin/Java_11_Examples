@@ -1,7 +1,5 @@
 package hackerrank;
 
-import jdk.jshell.spi.ExecutionControl;
-
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;

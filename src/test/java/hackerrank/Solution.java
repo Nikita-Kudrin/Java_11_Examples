@@ -5,7 +5,7 @@ import jdk.jshell.spi.ExecutionControl;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Solution{
+public class Solution {
     public static void main(String[] args) throws ExecutionControl.NotImplementedException {
 
         Scanner sc = new Scanner(System.in);
@@ -13,18 +13,18 @@ public class Solution{
 
         int n = Integer.parseInt(sc.nextLine());
         int[] a = new int[n];
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
             a[i] = Integer.parseInt(sc.nextLine());
 
         CustomRegister cr = new CustomRegister();
         cr.addAttendance(a);
 
         int m = Integer.parseInt(sc.nextLine());
-        for(int i = 0; i < m; i++){
+        for (int i = 0; i < m; i++) {
             String[] s = sc.nextLine().split(" ");
             int id = Integer.parseInt(s[0]);
             char c = s[1].charAt(0);
-            cr.changeAttendance(id,c);
+            cr.changeAttendance(id, c);
         }
 
         int l = Integer.parseInt(sc.nextLine());
@@ -33,6 +33,6 @@ public class Solution{
         int id = Integer.parseInt(sc.nextLine());
         cr.personalAttendance(id);
 
-        System.out.println("The maximum attendance is: "+cr.maxAttendance());
+        System.out.println("The maximum attendance is: " + cr.maxAttendance());
     }
 }

@@ -2,11 +2,11 @@ package collections;
 
 import common.BaseTest;
 import org.javatuples.Pair;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.*;
-import java.util.function.DoubleBinaryOperator;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class CollectionAlgorithmsTests extends BaseTest {
 

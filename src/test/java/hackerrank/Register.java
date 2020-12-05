@@ -1,7 +1,5 @@
 package hackerrank;
 
-import jdk.jshell.spi.ExecutionControl;
-
 public interface Register {
     void addAttendance(int[] studentIds);
 

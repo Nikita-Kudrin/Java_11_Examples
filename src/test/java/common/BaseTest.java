@@ -8,7 +8,7 @@ public class BaseTest {
 
     public static final Logger log = LogManager.getLogger(BaseTest.class.getName());
 
-    protected <T extends Iterable<?>> void printCollection(T collection) {
+    protected <T extends Iterable<?>> void printCollection(final T collection) {
         collection.spliterator().forEachRemaining(item -> System.out.println(item));
     }
 

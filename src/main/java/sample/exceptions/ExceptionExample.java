@@ -6,9 +6,9 @@ public class ExceptionExample {
         try {
             //var z = 3 / 0;
             throw new ArithmeticException("Exception: Bla bla");
-        } catch (ArithmeticException | NullPointerException ex) { // multi-catch
+        } catch (final ArithmeticException | NullPointerException ex) { // multi-catch
             System.out.println(ex);
-        } catch (Exception ex) {
+        } catch (final Exception ex) {
             System.out.println(ex);
         } finally {
             // do something

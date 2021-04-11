@@ -4,7 +4,7 @@ import org.javatuples.Pair;
 
 public class ClassWithGenericMethod {
 
-    public <T extends Number> ClassWithGenericMethod(T input) {
+    public <T extends Number> ClassWithGenericMethod(final T input) {
         // do something with input value
     }
 

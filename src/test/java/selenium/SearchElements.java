@@ -12,7 +12,7 @@ public class SearchElements extends BaseTest {
 
     @Test(enabled = false)
     public void navigateBackAndForthTest() throws InterruptedException {
-        var driver = getWebDriverInstance();
+        final var driver = getWebDriverInstance();
         driver.navigate().to(GOOGLE_URL);
 
         Thread.sleep(2000);
@@ -24,11 +24,11 @@ public class SearchElements extends BaseTest {
 
     @Test(enabled = false)
     public void searchSomeElements() {
-        var driver = getWebDriverInstance();
+        final var driver = getWebDriverInstance();
         driver.get(GOOGLE_URL);
 
         driver.findElement(By.cssSelector("h1.ddd"));
-        var wait = new WebDriverWait(driver, 10);
+        final var wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.tagName("input"))));
 
         driver.quit();

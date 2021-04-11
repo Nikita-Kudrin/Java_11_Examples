@@ -6,7 +6,7 @@ public class Doable extends Parent implements sample.interfaces.Doable {
         this(new int[]{});
     }
 
-    public Doable(int[] array) {
+    public Doable(final int[] array) {
         super(array);
     }
 
@@ -16,7 +16,7 @@ public class Doable extends Parent implements sample.interfaces.Doable {
     }
 
     @Override
-    public void doSomething(int x) {
+    public void doSomething(final int x) {
 
     }
 }

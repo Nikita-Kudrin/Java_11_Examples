@@ -11,7 +11,7 @@ public class CreateCollectionTest extends BaseTest {
 
     @Test
     public void exploreListAndSetCollections() {
-        var arrayList = new ArrayList<String>();
+        final var arrayList = new ArrayList<String>();
         arrayList.add("asdf");
         arrayList.ensureCapacity(100); // increase to 100 items
         arrayList.trimToSize(); // trim to current actual size
@@ -20,16 +20,16 @@ public class CreateCollectionTest extends BaseTest {
         var array = new String[arrayList.size()];
         array = arrayList.toArray(array);
 
-        var hashSet = new HashSet<String>();
+        final var hashSet = new HashSet<String>();
         hashSet.add("One");
-        hashSet.add(new String("One"));
+        hashSet.add("One");
         // only 1 of the "One" will remain
         printCollection(hashSet);
     }
 
     @Test
     public void exploreMapsCollections() {
-        var hashMap = new HashMap<String, Integer>();
+        final var hashMap = new HashMap<String, Integer>();
 
         hashMap.put("bla", 12);
         printCollection(hashMap.entrySet());

@@ -15,7 +15,7 @@ public class TypeWrappers {
 
     public void testMethod() {
         // unboxing
-        int x = intWrapper;
+        final int x = intWrapper;
         // autoboxing
         intWrapper = 10;
         intWrapper++;

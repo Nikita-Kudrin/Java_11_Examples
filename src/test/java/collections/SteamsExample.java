@@ -12,7 +12,7 @@ public class SteamsExample extends BaseTest {
 
     @DataProvider(name = "dataProvider")
     private Object[][] dataProvider() {
-        var list = new ArrayList<String>();
+        final var list = new ArrayList<String>();
         list.add("one");
         list.add("two");
         list.add("two");
@@ -25,18 +25,18 @@ public class SteamsExample extends BaseTest {
 
     @Test
     public void acquireStream() {
-        var list = new ArrayList<String>();
-        var listStream = list.stream();
+        final var list = new ArrayList<String>();
+        final var listStream = list.stream();
 
-        var array = new String[1];
-        var arrayStream = Arrays.stream(array);
+        final var array = new String[1];
+        final var arrayStream = Arrays.stream(array);
 
         //var bufferedReader = new BufferedReader(new FileReader(Path.of("bla bla"));
         //var readerStream = bufferedReader.lines();
     }
 
     @Test(dataProvider = "dataProvider")
-    public void sortStream(Object param1, ArrayList<String> sourceList) {
+    public void sortStream(final Object param1, final ArrayList<String> sourceList) {
         sourceList.stream()
                 .sorted()
                 .distinct()
@@ -45,14 +45,11 @@ public class SteamsExample extends BaseTest {
     }
 
     @Test(dataProvider = "dataProvider")
-    public void filterStream(Object param, ArrayList<String> sourceList) {
-        var filteredList = sourceList.stream()
+    public void filterStream(final Object param, final ArrayList<String> sourceList) {
+        final var filteredList = sourceList.stream()
                 .filter(item -> item.length() <= 1)
-                .map(item -> new String(item + " _ ololo"));
-
+                .map(item -> item + " _ ololo");
 
         printCollection(filteredList.collect(Collectors.toList()));
     }
-
-
 }

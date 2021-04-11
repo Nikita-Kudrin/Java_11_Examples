@@ -12,11 +12,11 @@ public class IOExample {
     private final Path filePath = Paths.get(Paths.get("").toAbsolutePath().toString(), "TestFile.txt");
 
     public void WriteTextIntoFile() throws IOException {
-        var text = new String[]{"some text", "another line", "one more line"};
+        final var text = new String[]{"some text", "another line", "one more line"};
 
         // automatic resource closing
-        try (var writer = new BufferedWriter(new FileWriter(filePath.toString()))) {
-            for (var line : text) {
+        try (final var writer = new BufferedWriter(new FileWriter(filePath.toString()))) {
+            for (final var line : text) {
                 writer.write(line);
                 writer.newLine();
             }
@@ -24,7 +24,7 @@ public class IOExample {
             writer.flush();
 
             System.out.println("Text is written to the file " + filePath);
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
         }
     }
@@ -33,12 +33,12 @@ public class IOExample {
         try {
             System.out.println("Readed lines:");
 
-            var lines = Files.lines(filePath)
+            final var lines = Files.lines(filePath)
                     .collect(Collectors.toList());
-            for (var line : lines) {
+            for (final var line : lines) {
                 System.out.println(line);
             }
-        } catch (IOException e) {
+        } catch (final IOException e) {
             e.printStackTrace();
         }
     }

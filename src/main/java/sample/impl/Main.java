@@ -7,9 +7,9 @@ import sample.io.IOExample;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        var instance = new Child(new int[]{10, 33});
-        var isInstanceOfParent = instance instanceof Parent;
+    public static void main(final String[] args) throws Exception {
+        final var instance = new Child(new int[]{10, 33});
+        final var isInstanceOfParent = instance instanceof Parent;
 
         System.out.println("Is instance of parent class: " + isInstanceOfParent);
 
@@ -20,9 +20,9 @@ public class Main {
         new ExceptionExample().MethodWithException();
 
         // enum
-        var enumExample = EnumExample.Red;
-        var values = EnumExample.values();
-        for (var value : values) {
+        final var enumExample = EnumExample.Red;
+        final var values = EnumExample.values();
+        for (final var value : values) {
             System.out.println(value.getColorNumber());
         }
 
@@ -32,15 +32,15 @@ public class Main {
         new TypeWrappers().testMethod();
 
         // IO example
-        var io = new IOExample();
+        final var io = new IOExample();
         io.WriteTextIntoFile();
         io.ReadLinesFromFile();
 
         // interfaces
-        var doable = new sample.impl.Doable(new int[]{1, 3});
+        final var doable = new sample.impl.Doable(new int[]{1, 3});
         System.out.println("Is instance of IDoable: " + (doable instanceof Doable));
 
         // generics
-        var genericInstance = new GenericClass<>(new sample.impl.Doable(new int[]{10, 1}));
+        final var genericInstance = new GenericClass<>(new sample.impl.Doable(new int[]{10, 1}));
     }
 }

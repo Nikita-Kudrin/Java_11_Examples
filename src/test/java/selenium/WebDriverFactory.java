@@ -8,13 +8,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebDriverFactory {
 
-    private static DesiredCapabilities driverCapabilities = new DesiredCapabilities();
+    private static final DesiredCapabilities driverCapabilities = new DesiredCapabilities();
 
     {
         driverCapabilities.setCapability("platform", Platform.WINDOWS);
     }
 
-    public static WebDriver getDriver(String browserName) {
+    public static WebDriver getDriver(final String browserName) {
         driverCapabilities.setCapability("browser", browserName);
 
         switch (browserName.toUpperCase()) {

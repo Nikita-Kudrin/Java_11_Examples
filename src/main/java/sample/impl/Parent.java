@@ -15,17 +15,17 @@ public abstract class Parent {
         System.out.println("Initializer block 2");
     }
 
-    private int[] array = new int[]{12, 10};
+    private int[] array = {12, 10};
 
     public int[] getArray() {
         return array;
     }
 
-    public void setArray(int[] array) {
+    public void setArray(final int[] array) {
         this.array = array;
     }
 
-    public Parent(int[] array) {
+    public Parent(final int[] array) {
         this.array = array;
     }
 
@@ -40,15 +40,15 @@ public abstract class Parent {
      */
     public void forLoopExample() {
         for (var x = 0; x < 10; x++) {
-            var z = 0;
+            final var z = 0;
         }
     }
 
     public void splitStringExample() {
-        var str = "Somestring.bla.bla";
-        var result = new ArrayList<>(Arrays.asList(str.split("\\.")));
+        final var str = "Somestring.bla.bla";
+        final var result = new ArrayList<>(Arrays.asList(str.split("\\.")));
 
-        for (var item : result) {
+        for (final var item : result) {
             System.out.println(item);
             //result.add("new str"); // TODO: special "bug"
         }

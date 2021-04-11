@@ -12,15 +12,15 @@ public class WorkingWithHttp {
 
     @Test
     public void httpClientExample() throws URISyntaxException {
-        var client = HttpClient.newHttpClient();
-        var request = HttpRequest.newBuilder(new URI("http://google.com"))
+        final var client = HttpClient.newHttpClient();
+        final var request = HttpRequest.newBuilder(new URI("http://google.com"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
 
-        var completableFuture = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+        final var completableFuture = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
         completableFuture.thenApply(HttpResponse::body);
 
-        var httpResponse = completableFuture.join();
+        final var httpResponse = completableFuture.join();
         System.out.println(httpResponse.body());
     }
 }

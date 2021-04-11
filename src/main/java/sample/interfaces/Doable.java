@@ -3,8 +3,8 @@ package sample.interfaces;
 public interface Doable {
     void doSomething(int x);
 
-    default void methodWithDefaultImplementation(int z) {
-        var variable = 10;
+    default void methodWithDefaultImplementation(final int z) {
+        final var variable = 10;
         somePrivateMethod();
         staticInterfaceMethod();
     }

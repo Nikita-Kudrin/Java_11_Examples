@@ -56,7 +56,6 @@ public class ConcurrentExample extends BaseTest {
 
     // ForkJoinPool
     // ForkJoinTask
-    // ForkJoinPool
     // RecursiveTask
     // RecursiveAction
 
@@ -82,7 +81,7 @@ public class ConcurrentExample extends BaseTest {
     // CopyOnWriteArrayList
 
 
-    // Flow (Reactive programming - controlling flow with use of back pressurel
+    // Flow (Reactive programming - controlling flow with use of back pressure)
     // Flow.Subscriber
     // Flow.Publisher
     // Flow.Processor

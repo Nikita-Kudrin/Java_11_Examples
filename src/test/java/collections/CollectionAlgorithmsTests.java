@@ -4,18 +4,11 @@ import common.BaseTest;
 import org.javatuples.Pair;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class CollectionAlgorithmsTests extends BaseTest {
-
-
-    public Pair<ArrayList, ArrayList> initNewCollections() {
-        var firstList = new ArrayList<String>();
-        firstList.add("90");
-        firstList.add("2.322");
-        firstList.add("340834");
+    public Pair<List, List> initNewCollections() {
+        var firstList = Arrays.asList("90", "2.322", "340834");
 
         var secondList = new ArrayList<String>();
         secondList.add("1251234.3");
@@ -31,7 +24,7 @@ public class CollectionAlgorithmsTests extends BaseTest {
         var firstList = collections.getValue0();
         var secondList = collections.getValue1();
 
-        Collections.sort(firstList, new Comparator<String>() {
+        firstList.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 var number1 = Double.parseDouble(o1);
